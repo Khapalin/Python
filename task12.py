@@ -25,3 +25,12 @@ for x in range(s):
         print(x, y)
         break
 """
+"""
+summa = int(input('Введите сумму чисел: '))
+product = int(input('Введите произведение чисел: '))
+for x in range(summa):
+    for y in range(x, summa):
+        if x + y == summa and x * y == product:
+            print(x, y)
+"""
+            

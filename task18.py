@@ -1,31 +1,31 @@
-"""
-i = 0
-min_num = abs(list_1[0] - k)
-index = 0
-while i < len(list_1):
-    if abs(list_1[i] - k) < min_num:
-        min_num = abs(list_1[i] - k)
-        index = i
-    i += 1
-print(list_1[index])
+# Задача 18: Требуется найти в массиве A[1..N] самый близкий по
+# величине элемент к заданному числу X. Пользователь в первой строке
+# вводит натуральное число N – количество элементов в массиве. В
+# последующих строках записаны N целых чисел Ai
+# . Последняя строка содержит число X
+#
+# 1 2 3 4 5
+# 6
+# -> 5
 
-"""
 
-n = int(input('Введите количество элементов в массиве: '))
+ #1 вариант
 
-list = []
+list_1 = [12, 23, 34, 45, 56]
+k = 25
+m = abs(k - list_1[0])
+number = list_1[0]
 
-for i in range(n):
-    list.append(int(input('Введите элемент массива: ')))
-print(list)
+for i in list_1:
+    if m > abs(i - k):
+        m = abs(i - k)
+        number = i
+print(number)
 
-x = int(input('Введите число: '))
+#2 вариант
 
-k = 0 #сюда положим индекс элемента массива, с которым у Х наименьшая разница
-minDiff = abs(x - list[0]) #сюда положим минимальную разницу между числом Х и элементом массива, предположим, что мин разница с первым элементом
-
-for i in range(n):
-    if abs(x - list[i]) <= minDiff:
-        minDiff = abs(x - list[i])
-        k = i
-print(list[k])
+list_1 = [12, 23, 34, 45, 56]
+k = 25
+for i in list_1:
+    res = min(list_1, key=lambda i: abs(i-k))
+print(res)
