@@ -16,6 +16,7 @@ count_ = list_1.count(k)
 print(f'Элемент {k} повторяется {count_} раза')
 
 #2 вариант
+
 import random
 lenlst = int(input("Введите длину списка: "))
 k = 3
